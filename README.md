@@ -22,6 +22,25 @@ If you'd like to add a framework, or add more tests please submit a pull request
 -   Base Bun
 -   [Express](https://expressjs.com/)
 
+## How to run
+
+### Requirements
+
+Docker is required to run tests as it ensures that the environment is as similar as possible for each framework. It also helps to avoid having to install and configure each framework locally.
+
+### Run tests
+
+In your terminal, run the following command:
+
+```shell
+git clone git@github.com:abdelilah/web-frameworks-platforms-benchmark.git
+cd web-frameworks-platforms-benchmark
+./benchmark.sh
+```
+
+once the tests are done, a `report.html` file will be generated in the `benchmark-results` directory.
+
+
 ## Tests
 
 In most cases especially for small applications, the performance of a web framework is not the bottleneck. However, it is still interesting to see how they compare for common tasks.
