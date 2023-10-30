@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    image: mariadb:11.1-jammy
+    env_file:
+      - .env
+    ports:
+      - "${MYSQL_PORT}:3306"
+    healthcheck:
+      test: ["CMD", "mariadb", "-h", "127.0.0.1", "-u", "root", "-proot", "-e", "SHOW DATABASES;"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+      
